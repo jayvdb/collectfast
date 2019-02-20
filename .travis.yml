@@ -1,10 +1,11 @@
 language: python
 python:
   - '3.6'
+before_install:
+  - sudo rm -f /etc/boto.cfg
 install:
   - pip install tox
 script: tox
-sudo: false
 env:
   matrix:
     # django 1.11
